@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% block content %}
+{{ block.super}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            {% for image in images %}
+            <div class="col-md-3 col-sm-6">
+                <a data-toggle="modal" data-target="#{{image.id}}"><img src="{{image.image.url}}" alt="Image"></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% for image in images %}
+<div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" style="color: red ; font-size:50px; font-weight:900"
+                    data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h2 class="desc">{{image.name}}</h2>
+                <h4>{{image.description}}</h4>
+                <h4>{{image.location.name}}</h4>
+                <h4>{{image.category.name}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="">
+                        <img src="{{image.image.url}}" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
