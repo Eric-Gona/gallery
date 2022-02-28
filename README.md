@@ -31,5 +31,3 @@ Python 3
 JavaScript
 CSS
 
-## Live Site
-View live
