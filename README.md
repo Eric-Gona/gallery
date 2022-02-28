@@ -24,8 +24,8 @@ This will clone the repositoty into your local folder.
 - gunicorn
 
 ## Technologies Used
-HTML
-Python 3
-JavaScript
-CSS
++ HTML
++ Python 3
++ JavaScript
++ CSS
 
