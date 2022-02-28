@@ -29,3 +29,5 @@ This will clone the repositoty into your local folder.
 + JavaScript
 + CSS
 
+## License
+MIT License: Copyright (c) 2022 Eric Karisa
